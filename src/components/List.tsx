@@ -6,4 +6,4 @@ const List: FC<{ data: string[] }> = ({ data }) => (
   </ul>
 )
 
-export default List
+export default List 
