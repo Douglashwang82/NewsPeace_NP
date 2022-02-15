@@ -1,0 +1,49 @@
+.main {
+    position: relative;
+    width: 400px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #272727;
+    overflow: hidden;
+    background: turquoise;
+  }
+  
+  .fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hotpink;
+  }
+  
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: #272727;
+  }
+  .content2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    color: #272727;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+  }
