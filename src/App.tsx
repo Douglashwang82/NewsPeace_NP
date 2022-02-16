@@ -8,6 +8,7 @@ import Topic from './components/topic/Topic';
 import Selection from './components/selection/Selectione';
 import AddComment from './components/comment/AddComment';
 import OpBar from './components/opBar/OpBar';
+import Coomment from './components/comment/Comment';
 function App() {
   return (
     <>
@@ -17,6 +18,7 @@ function App() {
     <Selection></Selection>
     <AddComment></AddComment>
     <OpBar />
+    <Coomment/>
     <MyFooter />
     {/*  Component End*/}
     </>
