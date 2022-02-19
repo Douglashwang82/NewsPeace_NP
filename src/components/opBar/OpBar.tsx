@@ -6,9 +6,9 @@ import styles from './styles.module.css'
 const OpBar: FC = () => {
     const [open, toggle] = useState(false)
     const [ref, { width }] = useMeasure()
-    let a = 40
-    let b = 60
-    let c = width * (a / (a + b))
+    var a:number = 40
+    var b:number = 60
+    var c:number = width * (a / (a + b))
     const props = useSpring({
       from: {width: 0},
       to:{width: c},

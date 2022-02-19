@@ -1,25 +1,21 @@
 // external libs
 import React from 'react';
-import { MyNavbar, MyFooter } from './components'
+import { MyNavbar } from './components'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// moy components
-import Topic from './components/topic/Topic';
-import Selection from './components/selection/Selectione';
-import AddComment from './components/comment/AddComment';
+// my components
+import AddCommentPage from './components/addCommentPage/AddComment';
 import OpBar from './components/opBar/OpBar';
-import Coomment from './components/comment/Comment';
+import Comment from './components/comment/Comment';
+import MainPage from './components/mainpage/MainPage';
+import CommentPage from './components/commentPage/CommentPage';
 function App() {
   return (
     <>
     {/* Components */}
-    <MyNavbar />
-    <Topic></Topic>
-    <Selection></Selection>
-    <AddComment></AddComment>
-    <OpBar />
-    <Coomment/>
-    <MyFooter />
+    <MainPage/>
+    <AddCommentPage></AddCommentPage>
+    <CommentPage />
     {/*  Component End*/}
     </>
   );

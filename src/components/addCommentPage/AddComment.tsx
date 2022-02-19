@@ -4,7 +4,7 @@ import { useInput } from '@mui/base';
 import { styled } from '@mui/material';
 import { TextareaAutosize, Box } from '@material-ui/core';
 
-const AddCoomment: FC = () => {
+const AddCommentPage: FC = () => {
   return <div>
     <Box>
     <TextareaAutosize></TextareaAutosize>
@@ -12,4 +12,4 @@ const AddCoomment: FC = () => {
   </div>;
 };
 
-export default AddCoomment;
+export default AddCommentPage;

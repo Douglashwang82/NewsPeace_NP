@@ -5,7 +5,7 @@ import { List, ListItemButton, ListItemText } from '@mui/material';
 
 
 
-const Coomment: FC = () => {
+const Comment: FC = () => {
   return (<div>
     <List>
       <ListItemButton>
@@ -27,4 +27,4 @@ const Coomment: FC = () => {
   </div>);
 };
 
-export default Coomment;
+export default Comment;
