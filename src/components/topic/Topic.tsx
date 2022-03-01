@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect';
 import useStyles from './styles';
 
 
-const Topic: FC = () => {
+const Topic: FC<{topic:string}> = ({topic}) => {
     const classes = useStyles();
 
 
@@ -16,7 +16,7 @@ const Topic: FC = () => {
                 }}
                 onInit={(typewriter) => {
                     typewriter.pauseFor(2500)
-                    typewriter.typeString("Do I need to get vaccinated?")
+                    typewriter.typeString(topic)
                     typewriter.start();
                 }}
             />
