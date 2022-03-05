@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { margin } from '@mui/system';
+
 
 
 export default makeStyles(() => ({
@@ -12,7 +12,7 @@ export default makeStyles(() => ({
     marginTop: "100px",
   },
   skipButton: {
-    background: "#FF65CE",
+    background: "hotpink",
     width: "250px",
     border: "solid",
   },

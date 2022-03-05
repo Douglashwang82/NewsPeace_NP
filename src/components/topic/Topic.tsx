@@ -12,11 +12,13 @@ const Topic: FC<{topic:string}> = ({topic}) => {
         <div className={classes.topic}>
             <Typewriter
                 options={{
-                    delay: 50
+                    delay: 50,
+                    loop:true,
                 }}
                 onInit={(typewriter) => {
                     typewriter.pauseFor(2500)
                     typewriter.typeString(topic)
+                    typewriter.pauseFor(3000)
                     typewriter.start();
                 }}
             />

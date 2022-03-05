@@ -14,13 +14,15 @@ const SubmitSkip: FC = () => {
         <Grid container spacing={4}>
 
           <Grid item xs={5}>
-            <Button component = {Link} className={classes.skipButton} to='/comment'>Skip</Button>
+            {/* <Button component = {Link} className={classes.skipButton} to='/comment'>Skip</Button> */}
+            <Button className = {classes.skipButton}>Skip</Button>
           </Grid>
 
           <Grid item xs={2}></Grid>
 
           <Grid item xs={5} >
-            <Button component = {Link} variant="contained" className={classes.submitButton} to='/comment'>Submit</Button>
+            {/* <Button component = {Link} variant="contained" className={classes.submitButton} to='/comment'>Submit</Button> */}
+            <Button className = {classes.submitButton}>Submit</Button>
           </Grid>
 
         </Grid>

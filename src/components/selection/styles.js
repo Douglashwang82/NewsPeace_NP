@@ -9,10 +9,10 @@ export default makeStyles(() => ({
     width: "600px",
     border: "solid",
     margin: "auto",
-    marginTop: "100px",
+    marginTop: "220px",
   },
   selectionButtonNo: {
-    background: "#FF65CE",
+    background: "hotpink",
     width: "250px",
     border: "solid",
   },
