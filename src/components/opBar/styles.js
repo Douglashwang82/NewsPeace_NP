@@ -8,6 +8,6 @@ export default makeStyles(() => ({
     width: "600px",
     border: "solid",
     margin: "auto",
-    marginTop: "100px",
+    marginTop: "10px",
   }
 }));

@@ -6,12 +6,12 @@ import { TextareaAutosize, Box } from '@material-ui/core';
 import SubmitSkip from '../submitSkip/SubmitSkip';
 import useStyles from './styles';
 
-const AddComment: FC<{handleUserComment: any}>= ({handleUserComment}) => {
+const AddComment: FC<{handleCurrentUserComment: any}>= ({handleCurrentUserComment}) => {
 
   const classes = useStyles();
 
   return <div className= {classes.addComment}>
-    <TextareaAutosize  aria-label="minimum height" placeholder="Put something in here.." minRows={10} maxRows = {10} className = {classes.textArea} onChange={handleUserComment}></TextareaAutosize>
+    <TextareaAutosize  aria-label="minimum height" placeholder="Put something in here.." minRows={3} maxRows = {10} className = {classes.textArea} onChange={handleCurrentUserComment}></TextareaAutosize>
   </div>;
 };
 

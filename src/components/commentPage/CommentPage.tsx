@@ -10,8 +10,8 @@ const CommentPage: FC = () => {
 
     return (
         <div className = {classes.commentPage}>
-            <OpBar />
-            <Comment />
+            {/* <OpBar /> */}
+            {/* <Comment /> */}
         </div>
     )
 };
