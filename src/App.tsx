@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
-import {Button} from "@material-ui/core";
+import { Button } from "@material-ui/core";
 // my components
 import AddComment from './components/addComment/AddComment';
 import Topic from './components/topic/Topic';
@@ -31,19 +31,19 @@ function App() {
     setTopic(temp);
     console.log("Current Topic:", temp);
   };
-  const handleAgree = (aBool:boolean) => {
+  const handleAgree = (aBool: boolean) => {
     setAgree(aBool);
     handlePageStateAdd();
-    console.log("Yes/No state:",aBool);
+    console.log("Yes/No state:", aBool);
   };
   const handleUserComment = (stringList: string[]) => setUserComment(stringList);
   const handleCurrentUserComment = (currentUserComment: any) => setCurrentUserComment(currentUserComment.target.value);
 
   const handlePostComment = (aBool: boolean) => {
-    if (aBool == true){
+    if (aBool == true) {
       // post here
       console.log("Added Comment");
-    }else{
+    } else {
       console.log("Skip Commenting");
     }
     handlePageStateAdd();
@@ -52,73 +52,76 @@ function App() {
   const handlePageStateAdd = () => setPageState(pageState + 1);
   const handlePageStateSub = () => setPageState(pageState - 1)
 
-    // fetching
-    useEffect(() => {
-      //fetching
-      fetch('/comment', {
-          method: 'GET',
-          headers: {
-              "Content-type": "application/json"
-          }
-      }).then(response => response.json())
-        //success to logi
-        .then(data =>{
-          const anytemp:string[] = [];
-        data.forEach(function (element:any) {
+  // fetching
+  useEffect(() => {
+    //fetching
+    fetch('/comment', {
+      method: 'GET',
+      headers: {
+        "Content-type": "application/json"
+      }
+    }).then(response => response.json())
+      //success to logi
+      .then(data => {
+        const anytemp: string[] = [];
+        data.forEach(function (element: any) {
           anytemp.push(element.CommentContent);
         })
         setUserComment(anytemp);
       })
-      .catch(function(err){
+      .catch(function (err) {
         console.log(`err ${err}`);
         alert("wrong info in demont");
       });
-      console.log("Fetching Act");
+    console.log("Fetching Act");
 
-      fetch('/topic', {
-        method: 'GET',
-        headers: {
-          "Content-type": "application/json"
-        }
-      }).then(response => response.json())
+    fetch('/topic', {
+      method: 'GET',
+      headers: {
+        "Content-type": "application/json"
+      }
+    }).then(response => response.json())
       .then(data => {
         console.log("topic", data);
         setCurrentUserTotalVote(data[0].TotalVote);
         setCurrentUserYesVote(data[0].YesVote);
-      }).catch(function(err) {
+      }).catch(function (err) {
         console.log(`err ${err}`);
         alert("wrong on topic");
       });
-      }, [topic]);
+  }, [topic]);
 
 
-      // current page
-      const renderSwitch = (pageState: number) => {
-        switch (pageState){
-          case 0:
-            return (
-            <div>
-            <Selection handleAgree = {handleAgree} />
-            </div>)
-          case 1:
-            return (
-            <div>
-            <AddComment handleCurrentUserComment = {handleCurrentUserComment}/>
-            <SubmitSkip handlePostComment = {handlePostComment}/>
-            </div>)
-          case 2:
-            return (
-            <div>
-                  {currentUserTotalVote? <OpBar yes = {currentUserYesVote} no = {currentUserTotalVote - currentUserYesVote}/>: <div />}
-                  <Comment userComment = {userComment}/> 
-            </div>)
-          default:
-            break;}};
+  // current page
+  const renderSwitch = (pageState: number) => {
+    switch (pageState) {
+      case 0:
+        return (
+          <div>
+            <Selection handleAgree={handleAgree} />
+          </div>)
+      case 1:
+        return (
+          <div>
+            <AddComment handleCurrentUserComment={handleCurrentUserComment} />
+            <SubmitSkip handlePostComment={handlePostComment} />
+          </div>)
+      case 2:
+        return (
+          <div>
+            {currentUserTotalVote ? <OpBar yes={currentUserYesVote} no={currentUserTotalVote - currentUserYesVote} /> : <div />}
+            <Comment userComment={userComment} />
+          </div>)
+      default:
+        break;
+    }
+  };
+
   return (
     <>
-    <Button onClick = {handlePageStateSub}>123</Button>
-    <Topic topic={topic} />
-    {renderSwitch(pageState)}
+      <Button onClick={handlePageStateSub}>123</Button>
+      <Topic topic={topic} />
+      {renderSwitch(pageState)}
     </>
   );
 }
