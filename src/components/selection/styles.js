@@ -9,16 +9,20 @@ export default makeStyles(() => ({
     width: "600px",
     border: "solid",
     margin: "auto",
-    marginTop: "220px",
+    marginTop: "165px",
   },
   selectionButtonNo: {
-    background: "hotpink",
     width: "250px",
-    border: "solid",
+    fontWeight:"bold",
+    background:"black",
+    color:"#BABABA",
   },
   selectionButtonYes: {
-    background: "cyan",
+    // background: "#2a0094",
     width: "250px",
-    border: "solid",
+    fontWeight: "bold",
+    // color:"#BABABA",
+    background: "#c48600",
+    color:"black"
   },
 }));
