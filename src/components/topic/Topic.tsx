@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect';
 import useStyles from './styles';
 
 
-const Topic: FC = () => {
+const Topic: FC<{topic:string}> = ({topic}) => {
     const classes = useStyles();
 
 
@@ -12,11 +12,13 @@ const Topic: FC = () => {
         <div className={classes.topic}>
             <Typewriter
                 options={{
-                    delay: 50
+                    delay: 50,
+                    loop:true,
                 }}
                 onInit={(typewriter) => {
                     typewriter.pauseFor(2500)
-                    typewriter.typeString("Do I need to get vaccinated?")
+                    typewriter.typeString(topic)
+                    typewriter.pauseFor(3000)
                     typewriter.start();
                 }}
             />
