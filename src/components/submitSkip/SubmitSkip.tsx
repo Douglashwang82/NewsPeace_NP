@@ -10,24 +10,17 @@ const SubmitSkip: FC<{handlePostComment: any}> = ({handlePostComment}) => {
 
   return <>
     <div className={classes.submitSkip}>
-      <ButtonGroup>
-        <Grid container spacing={4}>
+        <Grid container justifyContent = "center" spacing={1}>
 
-          <Grid item xs={5}>
-            {/* <Button component = {Link} className={classes.skipButton} to='/comment'>Skip</Button> */}
+          <Grid item>
             <Button className = {classes.skipButton} onClick = {() => handlePostComment(false)}>Skip</Button>
           </Grid>
 
-          <Grid item xs={2}></Grid>
-
-          <Grid item xs={5} >
-            {/* <Button component = {Link} variant="contained" className={classes.submitButton} to='/comment'>Submit</Button> */}
+          <Grid item>
             <Button className = {classes.submitButton} onClick = {() => handlePostComment(true)}>Submit</Button>
           </Grid>
 
         </Grid>
-
-      </ButtonGroup>
     </div>
   </>
 };

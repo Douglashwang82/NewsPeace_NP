@@ -7,16 +7,16 @@ export default makeStyles(() => ({
         fontSize: 30,
         // color: "#e7dac7",
         color:"black",
-        width: "600px",
-        border: "solid",
-        margin: "auto",
         marginTop: "10px",
     },
     textArea:{
-        width: "600px",
+        display:"block",
+        margin: "auto",
+        width: "50%",
         resize: "none",
         backgroundColor:"#121212",
         color:"#BABABA",
+        minWidth:"250px",
 
     }
 }));

@@ -10,24 +10,16 @@ const Selection: FC<{handleAgree: any}> = ({handleAgree}) => {
 
   return <>
     <div className={classes.selection}>
-      <ButtonGroup>
-        <Grid container spacing={4}>
-
-          <Grid item xs={5}>
-            {/* <Button component = {Link} className={classes.selectionButtonNo} onClick={() => handleSetAgree(false)} to='/addComment'>No</Button> */}
-            <Button variant="contained" className={classes.selectionButtonNo} onClick = {(e) => handleAgree(false)}>X</Button>
+        <Grid container justifyContent='center' spacing = {1}>
+          <Grid item>
+            <Button variant="outlined" className={classes.selectionButtonNo} onClick = {(e) => handleAgree(false)}>Disagree</Button>
           </Grid>
 
-          <Grid item xs={2}></Grid>
-
-          <Grid item xs={5} >
-            {/* <Button component = {Link} variant="contained" className={classes.selectionButtonYes} onClick={() => handleSetAgree(true)} to='/addComment'>Yes</Button> */}
-            <Button variant="contained" className={classes.selectionButtonYes} onClick = {(e) =>handleAgree(true)}>O</Button>
+          <Grid item>
+            <Button variant="contained" className={classes.selectionButtonYes} onClick = {(e) =>handleAgree(true)}>Agree</Button>
           </Grid>
 
         </Grid>
-
-      </ButtonGroup>
     </div>
   </>
 };

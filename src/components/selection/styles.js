@@ -5,24 +5,20 @@ import { margin } from '@mui/system';
 export default makeStyles(() => ({
   selection:{
     fontSize: 30,
-    color:"black",
-    width: "600px",
-    border: "solid",
-    margin: "auto",
-    marginTop: "165px",
+    marginTop: "151px",
   },
   selectionButtonNo: {
-    width: "250px",
-    fontWeight:"bold",
-    background:"black",
-    color:"#BABABA",
+    width: "130px",
+    border:"solid",
+    color:"#ff263c",
+    opacity: "0.7",
+    
   },
   selectionButtonYes: {
-    // background: "#2a0094",
-    width: "250px",
-    fontWeight: "bold",
-    // color:"#BABABA",
-    background: "#c48600",
-    color:"black"
+    width: "130px",
+    fontWeight:"Bold",
+    color:"black",
+    background:"#00d9c3",
+    opacity:"0.8",
   },
 }));

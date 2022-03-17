@@ -11,7 +11,7 @@ const AddComment: FC<{handleCurrentUserComment: any}>= ({handleCurrentUserCommen
   const classes = useStyles();
 
   return <div className= {classes.addComment}>
-    <TextareaAutosize  aria-label="minimum height" placeholder="Put something in here.." minRows={3} maxRows = {10} className = {classes.textArea} onChange={handleCurrentUserComment}></TextareaAutosize>
+    <TextareaAutosize aria-label="minimum height" placeholder="Put something in here.." minRows={3} maxRows = {10} className = {classes.textArea} onChange={handleCurrentUserComment}></TextareaAutosize>
   </div>;
 };
 

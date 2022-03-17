@@ -11,7 +11,8 @@ import Selection from './components/selection/Selection';
 import Comment from './components/comment/Comment';
 import OpBar from './components/opBar/OpBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import {Trail, animated} from 'react-spring';
+import { MyNavbar } from './components';
 function App() {
   // data
   const mockComments = ["first Comment", "Second Comment", "Third Comment"];
@@ -119,6 +120,7 @@ function App() {
 
   return (
     <>
+      <MyNavbar/>
       <Button onClick={handlePageStateSub}>123</Button>
       <Topic topic={topic} />
       {renderSwitch(pageState)}
