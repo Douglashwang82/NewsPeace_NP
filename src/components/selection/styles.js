@@ -12,6 +12,8 @@ export default makeStyles(() => ({
     border:"solid",
     color:"#ff263c",
     opacity: "0.7",
+    fontWeight:"Bold",
+
     
   },
   selectionButtonYes: {

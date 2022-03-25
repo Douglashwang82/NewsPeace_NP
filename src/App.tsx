@@ -13,6 +13,10 @@ import OpBar from './components/opBar/OpBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Trail, animated} from 'react-spring';
 import { MyNavbar } from './components';
+import LoginComponent from './components/loginpage/LoginComponent';
+import SignUpPage from './components/signupPage/SignUpPage';
+import ResetPasswordPage from './components/resetPasswordPage/ResetPasswordPage';
+
 function App() {
   // data
   const mockComments = ["first Comment", "Second Comment", "Third Comment"];
@@ -22,7 +26,6 @@ function App() {
   const [topic, setTopic] = useState('Do you need to get vaccinated?');
   const [agree, setAgree] = useState(false);
   const [userComment, setUserComment] = useState<string[]>([]);
-  const [currentState, setCurrentState] = useState(0)
   const [currentUserComment, setCurrentUserComment] = useState("");
   const [currentUserYesVote, setCurrentUserYesVote] = useState(0);
   const [currentUserTotalVote, setCurrentUserTotalVote] = useState(0);
@@ -98,16 +101,22 @@ function App() {
     switch (pageState) {
       case 0:
         return (
+          <>
+          <LoginComponent></LoginComponent>
+          </>
+        )
+      case 1:
+        return (
           <div>
             <Selection handleAgree={handleAgree} />
           </div>)
-      case 1:
+      case 2:
         return (
           <div>
             <AddComment handleCurrentUserComment={handleCurrentUserComment} />
             <SubmitSkip handlePostComment={handlePostComment} />
           </div>)
-      case 2:
+      case 3:
         return (
           <div>
             {currentUserTotalVote ? <OpBar yes={currentUserYesVote} no={currentUserTotalVote - currentUserYesVote} /> : <div />}
@@ -121,9 +130,13 @@ function App() {
   return (
     <>
       <MyNavbar/>
-      <Button onClick={handlePageStateSub}>123</Button>
-      <Topic topic={topic} />
+      {/* {(pageState != 0) ? <Topic topic={topic} /> : <></>} */}
+      <Button className = "tempButton" color="secondary" onClick={handlePageStateSub}>-</Button>
+      <Button className = "tempButton" color="secondary" onClick={handlePageStateAdd}>+</Button>
       {renderSwitch(pageState)}
+      {/* <LoginComponent></LoginComponent>
+      <SignUpPage></SignUpPage>
+      <ResetPasswordPage></ResetPasswordPage> */}
     </>
   );
 }

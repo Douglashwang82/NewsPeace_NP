@@ -6,13 +6,26 @@ export default makeStyles(() => ({
         width: "50%",
         margin:"auto",
         color:"#BABABA",
-        background:"#21201d",
         minWidth:"280px",
-    },
-    signinbutton:{
-        color:"#BABABA",
-    },
-    avatartext:{
         alignItems:"center",
+    },
+    logo:{
+        width: '50px',
+        height:'50px',
+    },
+    buttontext:
+    {
+        color:"#BABABA",
+        alignItems:"center",
+    },
+    logosection:{
+        alignItems:"center",
+    },
+    logotext:{
+        fontSize:"11px",
+    },
+    loginbutton:{
+        backgroundColor:"red",
     }
+
 }));

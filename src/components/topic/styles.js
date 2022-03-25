@@ -10,5 +10,6 @@ export default makeStyles(() => ({
     margin: "auto",
     marginTop: "100px",
     minWidth:"250px",
+    textAlign:"center",
   }
 }));
