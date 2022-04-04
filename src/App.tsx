@@ -130,7 +130,7 @@ function App() {
   return (
     <>
       <MyNavbar/>
-      {/* {(pageState != 0) ? <Topic topic={topic} /> : <></>} */}
+      {(pageState != 0) ? <Topic topic={topic} /> : <></>}
       <Button className = "tempButton" color="secondary" onClick={handlePageStateSub}>-</Button>
       <Button className = "tempButton" color="secondary" onClick={handlePageStateAdd}>+</Button>
       {renderSwitch(pageState)}
